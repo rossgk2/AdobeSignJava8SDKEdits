@@ -199,7 +199,7 @@
 /*     */ 
 /*     */ 
 /*     */     
-/* 200 */     libraryCreationInfo = LibraryDocumentsUtils.getLibraryCreationInfo(Arrays.asList(new LibraryDocumentCreationInfo.LibraryTemplateTypesEnum[] { LibraryDocumentCreationInfo.LibraryTemplateTypesEnum.DOCUMENT }, ), null, ApiUtils.getLibraryDocumentName());
+/* 200 */     libraryCreationInfo = LibraryDocumentsUtils.getLibraryCreationInfo(Arrays.asList(new LibraryDocumentCreationInfo.LibraryTemplateTypesEnum[] { LibraryDocumentCreationInfo.LibraryTemplateTypesEnum.DOCUMENT }), null, ApiUtils.getLibraryDocumentName());
 /*     */ 
 /*     */     
 /*     */     try {

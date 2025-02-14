@@ -26,7 +26,9 @@
 /*    */   
 /*    */   private static Type getGenericType(Class<?> klass) {
 /* 28 */     Type superclass = klass.getGenericSuperclass();
-/* 29 */     superclass instanceof Class;
+/* 29 */     if (superclass instanceof Class) {
+				throw new RuntimeException("Missing type parameter.");
+			}
 /*    */ 
 /*    */     
 /* 32 */     ParameterizedType parameterized = (ParameterizedType)superclass;

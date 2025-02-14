@@ -2,6 +2,7 @@
 /*     */ import java.io.FileInputStream;
 /*     */ import java.io.IOException;
 /*     */ import java.io.InputStream;
+import java.util.Arrays;
 /*     */ import java.util.Calendar;
 /*     */ import java.util.Date;
 /*     */ import java.util.Properties;
@@ -129,8 +130,8 @@
 /* 127 */     MultivaluedMapImpl multivaluedMapImpl = new MultivaluedMapImpl();
 /*     */ 
 /*     */     
-/* 130 */     multivaluedMapImpl.put("Access-Token", TestData.ACCESS_TOKEN);
-/* 131 */     multivaluedMapImpl.put("x-api-user", TestData.X_API_HEADER);
+/* 130 */     multivaluedMapImpl.put("Access-Token", Arrays.asList(TestData.ACCESS_TOKEN));
+/* 131 */     multivaluedMapImpl.put("x-api-user", Arrays.asList(TestData.X_API_HEADER));
 /* 132 */     return (MultivaluedMap)multivaluedMapImpl;
 /*     */   }
 /*     */   
@@ -138,8 +139,8 @@
 /* 136 */     MultivaluedMapImpl multivaluedMapImpl = new MultivaluedMapImpl();
 /*     */ 
 /*     */     
-/* 139 */     multivaluedMapImpl.put("Access-Token", TestData.NULL_PARAM);
-/* 140 */     multivaluedMapImpl.put("x-api-user", TestData.X_API_HEADER);
+/* 139 */     multivaluedMapImpl.put("Access-Token", Arrays.asList(TestData.NULL_PARAM));
+/* 140 */     multivaluedMapImpl.put("x-api-user", Arrays.asList(TestData.X_API_HEADER));
 /* 141 */     return (MultivaluedMap)multivaluedMapImpl;
 /*     */   }
 /*     */   
@@ -147,8 +148,8 @@
 /* 145 */     MultivaluedMapImpl multivaluedMapImpl = new MultivaluedMapImpl();
 /*     */ 
 /*     */     
-/* 148 */     multivaluedMapImpl.put("Access-Token", TestData.EMPTY_PARAM);
-/* 149 */     multivaluedMapImpl.put("x-api-user", TestData.X_API_HEADER);
+/* 148 */     multivaluedMapImpl.put("Access-Token", Arrays.asList(TestData.EMPTY_PARAM));
+/* 149 */     multivaluedMapImpl.put("x-api-user", Arrays.asList(TestData.X_API_HEADER));
 /* 150 */     return (MultivaluedMap)multivaluedMapImpl;
 /*     */   }
 /*     */   
@@ -156,8 +157,8 @@
 /* 154 */     MultivaluedMapImpl multivaluedMapImpl = new MultivaluedMapImpl();
 /*     */ 
 /*     */     
-/* 157 */     multivaluedMapImpl.put("Access-Token", TestData.ACCESS_TOKEN);
-/* 158 */     multivaluedMapImpl.put("x-api-user", TestData.EMPTY_PARAM);
+/* 157 */     multivaluedMapImpl.put("Access-Token", Arrays.asList(TestData.ACCESS_TOKEN));
+/* 158 */     multivaluedMapImpl.put("x-api-user", Arrays.asList(TestData.EMPTY_PARAM));
 /* 159 */     return (MultivaluedMap)multivaluedMapImpl;
 /*     */   }
 /*     */   public static void configureProperty() {

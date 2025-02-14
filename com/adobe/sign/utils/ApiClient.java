@@ -43,7 +43,7 @@
 /*  41 */   private Map<String, Client> hostMap = new HashMap<>();
 /*  42 */   private Map<String, String> defaultHeaderMap = new HashMap<>();
 /*     */   private boolean debugging = false;
-/*  44 */   private String envHostName = "https://secure.na1.adobesign.us";
+/*  44 */   private String envHostName = "https://secure.na1.echosign.com";
 /*  45 */   private String subPath = "/api/rest/v5";
 /*     */   private boolean queryBaseUrl = true;
 /*  47 */   private JSON json = new JSON();
@@ -189,7 +189,7 @@
 /*     */     }
 /* 188 */     if (param instanceof Collection) {
 /* 189 */       StringBuilder b = new StringBuilder();
-/* 190 */       for (Object o : param) {
+/* 190 */       for (Object o : (Collection<?>) param) {
 /* 191 */         if (b.length() > 0) {
 /* 192 */           b.append(",");
 /*     */         }

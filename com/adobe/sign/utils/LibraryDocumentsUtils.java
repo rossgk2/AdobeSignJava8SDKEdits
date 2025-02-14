@@ -65,7 +65,7 @@
 /*     */ 
 /*     */ 
 /*     */     
-/*  68 */     return getLibraryCreationInfo(Arrays.asList(new LibraryDocumentCreationInfo.LibraryTemplateTypesEnum[] { LibraryDocumentCreationInfo.LibraryTemplateTypesEnum.DOCUMENT }, ), LibraryDocumentCreationInfo.LibrarySharingModeEnum.USER, TestData.NULL_PARAM, TestData.NULL_PARAM, transientDocumentId, TestData.NULL_PARAM, documentName);
+/*  68 */     return getLibraryCreationInfo(Arrays.asList(new LibraryDocumentCreationInfo.LibraryTemplateTypesEnum[] { LibraryDocumentCreationInfo.LibraryTemplateTypesEnum.DOCUMENT }), LibraryDocumentCreationInfo.LibrarySharingModeEnum.USER, TestData.NULL_PARAM, TestData.NULL_PARAM, transientDocumentId, TestData.NULL_PARAM, documentName);
 /*     */   }
 /*     */ 
 /*     */ 
@@ -77,7 +77,7 @@
 /*     */ 
 /*     */   
 /*     */   public static LibraryCreationInfo getLibraryCreationInfo(FileInfo fileInfo, String documentName) {
-/*  80 */     return getLibraryCreationInfo(Arrays.asList(new LibraryDocumentCreationInfo.LibraryTemplateTypesEnum[] { LibraryDocumentCreationInfo.LibraryTemplateTypesEnum.DOCUMENT }, ), LibraryDocumentCreationInfo.LibrarySharingModeEnum.USER, fileInfo.getLibraryDocumentId(), fileInfo.getLibraryDocumentName(), fileInfo.getTransientDocumentId(), (fileInfo.getDocumentURL() != null) ? fileInfo.getDocumentURL().getUrl() : TestData.NULL_PARAM, documentName);
+/*  80 */     return getLibraryCreationInfo(Arrays.asList(new LibraryDocumentCreationInfo.LibraryTemplateTypesEnum[] { LibraryDocumentCreationInfo.LibraryTemplateTypesEnum.DOCUMENT }), LibraryDocumentCreationInfo.LibrarySharingModeEnum.USER, fileInfo.getLibraryDocumentId(), fileInfo.getLibraryDocumentName(), fileInfo.getTransientDocumentId(), (fileInfo.getDocumentURL() != null) ? fileInfo.getDocumentURL().getUrl() : TestData.NULL_PARAM, documentName);
 /*     */   }
 /*     */ 
 /*     */ 
