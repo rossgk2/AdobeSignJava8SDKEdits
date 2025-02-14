@@ -4,7 +4,7 @@ This repository is an Eclipse Mars 2 project that, when built, produces an alrea
 
 # Steps performed to create this repository 
 
-You do not need to follow the below steps. In fact, unless you somehow have the Adobe Sign SDK for Java 8, you cannot perform these steps.
+You do not need to follow the below steps. And you actually cannot perform these steps, since they require access to private resources.
 
 1. Use [JD-GUI](https://java-decompiler.github.io/) to decompile the already-modified Adobe Sign SDK for Java 8. It has this file structure: 
 
@@ -24,7 +24,7 @@ Use File > “Save all sources” to save the decompilation as a .zip.
 
 4. Replace the adobe-sign-java-sdk-1.1.1.jar.zip in fldr/build/libs with adobe-sign-java-sdk-1.1.1.jar from the build/libs folder of the already-modified SDK. 
 
-5. Use the dependencies from this build.gradle from the GigaSign source code (even though it’s not from the SDK, it’s probably originally SDK) in a build.gradle file. Put this in fldr. Add a settings.gradle to fldr whose only content is the single line include ':rest-api-sdk'.
+5. Use the dependencies from the build.gradle from the GigaSign source code (even though it’s not from the SDK, it’s probably originally SDK) in a build.gradle file. Put this in fldr. Add a settings.gradle to fldr whose only content is the single line include ':rest-api-sdk'.
 
 6. Follow the below steps 1 - 4 and view the repository in Eclipse Mars 2. For some reason, some of the decompiled source files are missing `import` statements, even though those `import` statements can be seen when browsing the original files in JD-GUI. Manually fix these import statements. 
 
