@@ -4,7 +4,7 @@ This repository is an Eclipse Mars 2 project that, when built, produces an alrea
 
 # Steps performed to create this repository 
 
-1. Use JDGUI to decompile the already-modified Adobe Sign SDK for Java 8. It has this file structure: 
+1. Use [JD-GUI](https://java-decompiler.github.io/) to decompile the already-modified Adobe Sign SDK for Java 8. It has this file structure: 
 
 * build
   * libs
@@ -26,14 +26,15 @@ Use File > “Save all sources” to save the decompilation as a .zip.
 
 # How to build the code in this repository 
 
-1. Download Eclipse Mars 2, since Eclipse Mars 2 is the version of Eclipse that supported Java 8. Use File > New > Java Project to open this repository folder as a Java Project. 
-2. Since Eclipse Mars is old, we can’t use Gradle plugins from the Eclipse Marketplace with it, and have to manually run Gradle instead. To do this, after obtaining a global install of any Gradle version*, open a terminal, cd to fldr, and 
+1. Download this repository, either manually or via `git clone`.
+2. [Download Eclipse Mars 2](https://www.eclipse.org/downloads/packages/release/mars/2/eclipse-ide-java-developers), since Eclipse Mars 2 is the version of Eclipse that supported Java 8. Use File > New > Java Project to open this repository folder as a Java Project. 
+3. Since Eclipse Mars is old, we can’t use Gradle plugins from the Eclipse Marketplace with it, and have to manually run Gradle instead. To do this, after obtaining a global install of any Gradle version*, open a terminal, `cd` to this repository, and 
    1. `gradle wrapper`. This uses the global Gradle install to generate a local install of Gradle that is of the Gradle version that’s specified in fldr/build.gradle. The install is encapsulated in gradlew.bat, which is intended for Windows users, and gradlew, which is intended for Unix users.
    2. `gradlew eclipse` (on Windows) `./gradlew eclipse` (on Unix). This executes the local Gradle executable with the “eclipse” argument. Doing so instructs Gradle to add the dependencies specified in build.gradle to .classpath, which is an Eclipse project configuration file. Entries of .classpath can be interacted via the GUI in Project > Properties > Java Build Path > Libraries. 
-3. Running gradlew eclipse causes extraneous folders (src/main/java, src/test/java) to get added to the build path. Remove them from the build path in Project > Properties.
-4. For some reason, some of the decompiled source files are missing import statements, even though those import statements can be seen when browsing the original files in JDGUI. Manually fix these import statements. 
-5. Some of the decompiled source files also have compile and syntax errors. All of these errors can be seen in the original files when browsing in JDGUI. So ignore them. 
+4. Running `gradlew eclipse` causes extraneous folders (src/main/java, src/test/java) to get added to the build path. Remove them from the build path in Project > Properties.
+5. For some reason, some of the decompiled source files are missing `import` statements, even though those `import` statements can be seen when browsing the original files in JD-GUI. Manually fix these import statements. 
+6. Some of the decompiled source files also have compile and syntax errors. All of these errors can be seen in the original files when browsing in JD-GUI. So ignore them. 
 
-6. File > Export to .jar. 
+7. File > Export to .jar. 
 
-\* Any Gradle version will work, even if the Gradle version specified in build.gradle is greater than the globally installed Gradle version. To install Gradle globally, use a package manager like apt (Unix), Homebrew (Mac), or Chocolatey (Windows). You can also install it manually. or chochlatey download a .zip of Gradle from https://gradle.org/releases/. Extract the folder inside the .zip file; it will be called someting like “gradle-2.0”. Move this folder to somewhere convenient. Then add the full path of gradle-2.0 to the “PATH” environment variable. 
+\* Any Gradle version will work, even if the Gradle version specified in build.gradle is greater than the globally installed Gradle version. To install Gradle globally, use a package manager like apt (Unix), Homebrew (Mac), or Chocolatey (Windows). You can also install it manually. To do so, download a .zip of Gradle from https://gradle.org/releases/. Extract the folder inside the .zip file; it will be called something like “gradle-2.0”. Move this folder to somewhere convenient. Then add the full path of gradle-2.0 to the “PATH” environment variable.
