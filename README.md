@@ -4,6 +4,8 @@ This repository is an Eclipse Mars 2 project that, when built, produces an alrea
 
 # Steps performed to create this repository 
 
+You do not need to follow the below steps. In fact, unless you somehow have the Adobe Sign SDK for Java 8, you cannot perform these steps.
+
 1. Use [JD-GUI](https://java-decompiler.github.io/) to decompile the already-modified Adobe Sign SDK for Java 8. It has this file structure: 
 
 * build
