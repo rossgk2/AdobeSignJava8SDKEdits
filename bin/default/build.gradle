@@ -1,0 +1,45 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+ext {
+    swagger_annotations_version = "1.5.9"
+    jackson_version = "2.7.4"
+    jackson_datatype_joda = "2.7.4"
+    jersey_version = "1.19.1"
+    jodatime_version = "2.9.4"
+    commons_validator_version = "1.5.1"
+    log4j_version = "1.2.17"
+    junit_version = "4.12"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "com.sun.jersey:jersey-client:$jersey_version"
+    compile "com.sun.jersey.contribs:jersey-multipart:$jersey_version"
+    compile "com.fasterxml.jackson.core:jackson-core:$jackson_version"
+    compile "com.fasterxml.jackson.core:jackson-annotations:$jackson_version"
+    compile "com.fasterxml.jackson.core:jackson-databind:$jackson_version"
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-joda:$jackson_datatype_joda"
+    compile "joda-time:joda-time:$jodatime_version"
+    compile "io.swagger:swagger-annotations:$swagger_annotations_version"
+    compile "commons-validator:commons-validator:$commons_validator_version"
+    compile "log4j:log4j:$log4j_version"
+    testCompile "junit:junit:$junit_version"
+}
+
+test {
+    useJUnit()
+}
+
+wrapper {
+    gradleVersion = '6.9.4'  // Last version with Java 8 support
+}
