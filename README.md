@@ -24,7 +24,7 @@ Use File > “Save all sources” to save the decompilation as a .zip.
 
 4. Replace the adobe-sign-java-sdk-1.1.1.jar.zip in fldr/build/libs with adobe-sign-java-sdk-1.1.1.jar from the build/libs folder of the already-modified SDK. 
 
-5. Use the dependencies from the build.gradle from the GigaSign source code in a build.gradle file. (This works since the build.gradle from the GigaSign source code is derived from the build.gradle for the Java 8 Adobe Sign SDK). Put this in fldr. Add a settings.gradle to fldr whose only content is the single line include ':rest-api-sdk'.
+5. Use the dependencies from the build.gradle from the GigaSign source code in a build.gradle file. (This works since the build.gradle from the GigaSign source code is derived from the build.gradle for the Java 8 Adobe Sign SDK). Put this build.gradle in fldr. Also, add a settings.gradle file to fldr whose only content is the single line `include ':rest-api-sdk'`.
 
 6. Follow the below steps 1 - 4 and view the repository in Eclipse Mars 2. For some reason, some of the decompiled source files are missing `import` statements, even though those `import` statements can be seen when browsing the original files in JD-GUI. Manually fix these import statements. 
 
