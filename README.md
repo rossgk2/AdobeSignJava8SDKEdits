@@ -26,7 +26,9 @@ Use File > “Save all sources” to save the decompilation as a .zip.
 
 5. Use the dependencies from the build.gradle from the GigaSign source code in a build.gradle file. (This works since the build.gradle from the GigaSign source code is derived from the build.gradle for the Java 8 Adobe Sign SDK). Put this build.gradle in fldr. Also, add a settings.gradle file to fldr whose only content is the single line `include ':rest-api-sdk'`.
 
-6. Follow the below steps 1 - 4 and view the repository in Eclipse Mars 2. For some reason, some of the decompiled source files are missing `import` statements, even though those `import` statements can be seen when browsing the original files in JD-GUI. Manually fix these import statements. 
+6. Follow the below steps 1 - 4 and view the repository in Eclipse Mars 2. For some reason, some of the decompiled source files are missing `import` statements, even though those `import` statements can be seen when browsing the original files in JD-GUI. Manually fix these import statements.
+
+7. After all of the missing `import` statements are added, there will still be compile errors. If you browse the original files with JD-GUI before doing "Save all sources", you will see these same errors. This is because these errors are an artifact of the decompilation. Fix the errors by making educated guesses as to what the code is supposed to be.
 
 # How to build the code in this repository 
 
@@ -36,8 +38,6 @@ Use File > “Save all sources” to save the decompilation as a .zip.
    1. `gradle wrapper`. This uses the global Gradle install to generate a local install of Gradle that is of the Gradle version specified in fldr/build.gradle. The install is encapsulated in gradlew.bat, which is intended for Windows users, and gradlew, which is intended for Unix users.
    2. `gradlew eclipse` (on Windows) `./gradlew eclipse` (on Unix). This executes the local Gradle executable with the “eclipse” argument. Doing so instructs Gradle to add the dependencies specified in build.gradle to .classpath, which is an Eclipse project configuration file. Entries of .classpath can be interacted via the GUI in Project > Properties > Java Build Path > Libraries. 
 4. Running `gradlew eclipse` causes extraneous folders (src/main/java, src/test/java) to get added to the build path. Remove them from the build path in Project > Properties.
-5. Some of the decompiled source files also have compile and syntax errors. All of these errors can be seen in the original files when browsing in JD-GUI. So ignore them. 
-
-7. File > Export to .jar. 
+5. File > Export to .jar. 
 
 \* Any global Gradle version will work, even if the Gradle version specified in build.gradle is greater than the globally installed Gradle version. To check if you have a global Gradle install, execute `gradle -v` in a command prompt. If you get an error, you do not have a global Gradle install. To install Gradle globally, you can either use a package manager like apt (Unix), Homebrew (Mac), or Chocolatey (Windows), or you can do a manual install. To perform a manual install, download a .zip of some Gradle release from https://gradle.org/releases/. Extract the folder inside the .zip file; it will be called something like “gradle-2.0”. Move this folder to somewhere convenient. Then add the full path of "gradle-2.0/bin" to the "PATH" environment variable.
