@@ -20,7 +20,7 @@ Use File > “Save all sources” to save the decompilation as a .zip.
 
 2. Extract the single folder that is inside the .zip. Let’s say it’s called “fldr”. 
 
-3. Delete .project and .classpath from fldr. 
+3. Delete .project and .classpath, which are Eclipse project configuration files, from "fldr".
 
 4. Replace the adobe-sign-java-sdk-1.1.1.jar.zip in fldr/build/libs with adobe-sign-java-sdk-1.1.1.jar from the build/libs folder of the already-modified SDK. 
 
