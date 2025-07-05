@@ -4,7 +4,7 @@ This repository is an Eclipse Mars 2 project that, when built, produces an alrea
 
 # Steps performed to create this repository 
 
-You do not need to follow the below steps. And you actually cannot perform these steps, since they require access to private resources.
+You do not need to follow the below steps. And you actually cannot perform these steps, since they require access to the already-modified Adobe Sign SDK for Java 8 that comes with GigaSign.
 
 1. Use [JD-GUI](https://java-decompiler.github.io/) to decompile the already-modified Adobe Sign SDK for Java 8. It has this file structure: 
 
