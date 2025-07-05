@@ -1,6 +1,6 @@
 # About
 
-This repository is an Eclipse Mars 2 project that, when built, produces an already-modified version of the Adobe Sign SDK for Java 8. The SDK has been modified to work for GigaSign.
+This repository is an Eclipse Mars 2 project that, when built, produces an already-modified version of the Adobe Sign SDK for Java 8. The SDK has been modified to work for [GigaSign](https://experienceleague.adobe.com/en/docs/document-cloud-learn/sign-learning-hub/develop/custom/gigasign), which is a tool that uses parallelism to send of copies of the same document to thousands of recipients at once.
 
 # Steps performed to create this repository 
 
